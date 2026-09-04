@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chile | Descubra o Extraordinário</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
     <header class="navbar">
@@ -19,112 +16,175 @@
         <nav class="nav-links">
             <a href="#destinos">Destinos</a>
             <a href="#cultura">Cultura</a>
-            <a href="#gastronomia">Gastronomia</a>
+            <a href="#dicas">Dicas Práticas</a>
+            <a href="#newsletter" class="nav-btn">Planejar Viagem</a>
         </nav>
     </header>
 
     <section class="hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <span class="badge">Guia Oficial de Viagem</span>
-            <h1>Explore os contrastes do Chile</h1>
-            <p>Do deserto mais árido do mundo às geleiras imponentes da Patagônia.</p>
-            <a href="#destinos" class="btn">Explorar Destinos</a>
+            <span class="badge">✦ Guia Oficial de Viagem 2026</span>
+            <h1>Explore os extremos da América do Sul</h1>
+            <p>Dos gêiseres quentes do Deserto do Atacama às imponentes geleiras azuis da Patagônia.</p>
+            <div class="hero-actions">
+                <a href="#destinos" class="btn btn-primary">Explorar Destinos</a>
+                <a href="#dicas" class="btn btn-secondary">Guia Rápido</a>
+            </div>
         </div>
     </section>
 
     <main class="container">
+        <!-- SEÇÃO DESTINOS -->
         <section id="destinos">
-            <h2 class="section-title">Destinos Imperdíveis</h2>
+            <div class="section-header">
+                <span class="section-subtitle">Onde Ir</span>
+                <h2 class="section-title">Destinos Inesquecíveis</h2>
+            </div>
             <div class="cards-grid">
                 <article class="card">
                     <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=800&q=80"
-                            alt="Deserto do Atacama">
-                    </div>
-                    <div class="card-content">
+                        <img src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=800&q=80" alt="Deserto do Atacama">
                         <span class="card-tag">Natureza</span>
+                    </div>
+                    <div class="card-content">
                         <h3>Deserto do Atacama</h3>
-                        <p>Paisagens surreais, géiseres e o céu mais límpido do planeta para observação astronômica.</p>
+                        <p>O deserto mais árido do mundo oferece vales lunares, lagoas salgadas e um dos céus mais estrelados do planeta.</p>
+                        <div class="card-meta">
+                            <span>📍 Norte do Chile</span>
+                            <span class="rating">★ 4.9</span>
+                        </div>
                     </div>
                 </article>
 
                 <article class="card">
                     <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1527004013197-933c4bb611b3?auto=format&fit=crop&w=800&q=80"
-                            alt="Torres del Paine">
-                    </div>
-                    <div class="card-content">
+                        <img src="https://images.unsplash.com/photo-1527004013197-933c4bb611b3?auto=format&fit=crop&w=800&q=80" alt="Torres del Paine">
                         <span class="card-tag">Aventura</span>
+                    </div>
+                    <div class="card-content">
                         <h3>Torres del Paine</h3>
-                        <p>O epicentro do trekking mundial na Patagônia com montanhas e lagos turquesa.</p>
+                        <p>Parque nacional ícone da Patagônia com picos de granito dramáticos, icebergues e circuitos de trekking de nível mundial.</p>
+                        <div class="card-meta">
+                            <span>📍 Sul / Patagônia</span>
+                            <span class="rating">★ 5.0</span>
+                        </div>
                     </div>
                 </article>
 
                 <article class="card">
                     <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=800&q=80"
-                            alt="Valparaíso">
-                    </div>
-                    <div class="card-content">
+                        <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=800&q=80" alt="Valparaíso">
                         <span class="card-tag">Urbano</span>
-                        <h3>Valparaíso</h3>
-                        <p>Arte de rua pulsante, colinas históricas e arquitetura única banhada pelo Oceano Pacífico.
-                        </p>
+                    </div>
+                    <div class="card-content">
+                        <h3>Valparaíso & Viña del Mar</h3>
+                        <p>Cidade portuária patrimônio da UNESCO, famosa por seus funiculares históricos, grafites vibrantes e vista para o Pacífico.</p>
+                        <div class="card-meta">
+                            <span>📍 Costa Central</span>
+                            <span class="rating">★ 4.7</span>
+                        </div>
                     </div>
                 </article>
             </div>
         </section>
 
+        <!-- SEÇÃO CULTURA & GASTRONOMIA -->
         <section id="cultura">
-            <h2 class="section-title">Cultura & Herança</h2>
-            <div class="cards-grid">
-                <article class="card">
+            <div class="section-header">
+                <span class="section-subtitle">Identidade</span>
+                <h2 class="section-title">Cultura & Sabores</h2>
+            </div>
+            <div class="cards-grid dual-grid">
+                <article class="card flex-card">
                     <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80"
-                            alt="Música e Cultura">
+                        <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=800&q=80" alt="Vinhos do Chile">
                     </div>
                     <div class="card-content">
-                        <span class="card-tag">Tradição</span>
-                        <h3>Dança e Música</h3>
-                        <p>A "Cueca" celebra a identidade chilena com ritmos vibrantes em festas tradicionais.</p>
+                        <span class="card-tag">Enoturismo</span>
+                        <h3>Vinhos de Classe Mundial</h3>
+                        <p>O Vale do Maipo e o Vale do Colchagua abrigam algumas das vinícolas mais prestigiadas do mundo, célebres pela uva Carménère.</p>
                     </div>
                 </article>
 
-                <article class="card">
+                <article class="card flex-card">
                     <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=800&q=80"
-                            alt="Literatura Chilena">
+                        <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=800&q=80" alt="Literatura Chilena">
                     </div>
                     <div class="card-content">
-                        <span class="card-tag">Literatura</span>
+                        <span class="card-tag">Patrimônio</span>
                         <h3>Terra de Poetas</h3>
-                        <p>Berço dos prêmios Nobel Pablo Neruda e Gabriela Mistral.</p>
+                        <p>Berço dos prêmios Nobel Pablo Neruda e Gabriela Mistral. Visite as casas-museu transformadas em acervos artísticos em Isla Negra e Santiago.</p>
                     </div>
                 </article>
             </div>
         </section>
 
-        <section id="gastronomia" class="highlight-box">
-            <div class="highlight-content">
-                <h2>Sabores Inesquecíveis</h2>
-                <p>Descubra a rica culinária baseada em frutos do mar, empanadas tradicionais e os mundialmente
-                    renomados vinhos do Vale do Maipo.</p>
+        <!-- SEÇÃO DICAS PRÁTICAS -->
+        <section id="dicas" class="info-section">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Preparação</span>
+                <h2 class="section-title">Dicas para a sua Viagem</h2>
+            </div>
+            <div class="info-grid">
+                <div class="info-box">
+                    <div class="info-icon">🗓️</div>
+                    <h4>Melhor Época</h4>
+                    <p>De Outubro a Março para a Patagônia. De Junho a Setembro para estações de esqui perto de Santiago.</p>
+                </div>
+                <div class="info-box">
+                    <div class="info-icon">💵</div>
+                    <h4>Moeda & Câmbio</h4>
+                    <p>Peso Chileno (CLP). Cartões de crédito são amplamente aceitos nas principais cidades e pontos turísticos.</p>
+                </div>
+                <div class="info-box">
+                    <div class="info-icon">✈️</div>
+                    <h4>Documentação</h4>
+                    <p>Brasileiros não precisam de visto nem passaporte para turismo até 90 dias, apenas RG atualizado.</p>
+                </div>
+                <div class="info-box">
+                    <div class="info-icon">🍷</div>
+                    <h4>Gastronomia</h4>
+                    <p>Não deixe de provar Empanadas de Pino, Pastel de Choclo, Centolla e o tradicional Pisco Sour.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEWSLETTER -->
+        <section id="newsletter" class="newsletter-card">
+            <div class="newsletter-content">
+                <h2>Monte seu itinerário pelo Chile</h2>
+                <p>Receba gratuitamente um guia em PDF com roteiros detalhados de 7, 10 e 15 dias.</p>
+                <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Guia enviado com sucesso!');">
+                    <input type="email" placeholder="Digite seu melhor e-mail..." required>
+                    <button type="submit" class="btn btn-primary">Receber Guia</button>
+                </form>
             </div>
         </section>
     </main>
-    <section class="newsletter">
-        <h2>Receba nosso Guia Gratuito</h2>
-        <p>Inscreva-se para receber itinerários exclusivos e dicas de viagem sobre o Chile.</p>
-        <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Inscrição realizada!');">
-            <input type="email" placeholder="Digite seu melhor e-mail" required>
-            <button type="submit" class="btn">Garantir Guia</button>
-        </form>
-    </section>
+
     <footer>
-        <p>&copy; 2026 Chile Tourism Guide. Todos os direitos reservados.</p>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="#" class="logo">Chile<span>.</span></a>
+                <p>Guia independente de turismo, cultura e navegação no Chile.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Navegação</h4>
+                <a href="#destinos">Destinos</a>
+                <a href="#cultura">Cultura</a>
+                <a href="#dicas">Dicas</a>
+            </div>
+            <div class="footer-links">
+                <h4>Atalhos</h4>
+                <a href="#newsletter">Baixar Guia</a>
+                <a href="#">Privacidade</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Chile Travel Guide. Todos os direitos reservados.</p>
+        </div>
     </footer>
 
 </body>
-
 </html>
