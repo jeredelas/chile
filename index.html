@@ -1,215 +1,333 @@
-import weasyprint
-
-html_content = """
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<title>Guia de Viagem ao Chile</title>
-<style>
-  @page {
-    size: A4;
-    margin: 15mm 12mm;
-    background-color: #f8fafc;
-  }
-  body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    color: #1e293b;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-  }
-  h1 {
-    color: #0f172a;
-    font-size: 20pt;
-    border-bottom: 2px solid #2563eb;
-    padding-bottom: 8px;
-    margin-top: 0;
-  }
-  h2 {
-    color: #1e3a8a;
-    font-size: 14pt;
-    margin-top: 18px;
-    margin-bottom: 8px;
-    border-left: 4px solid #2563eb;
-    padding-left: 8px;
-    page-break-after: avoid;
-  }
-  h3 {
-    color: #1d4ed8;
-    font-size: 11pt;
-    margin-top: 12px;
-    margin-bottom: 6px;
-    page-break-after: avoid;
-  }
-  p, li {
-    font-size: 9.5pt;
-  }
-  ul {
-    margin-top: 4px;
-    margin-bottom: 10px;
-    padding-left: 18px;
-  }
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 12px 0;
-    font-size: 8.5pt;
-  }
-  th {
-    background-color: #1e3a8a;
-    color: white;
-    padding: 6px 8px;
-    text-align: left;
-    border: 1px solid #cbd5e1;
-  }
-  td {
-    padding: 6px 8px;
-    border: 1px solid #cbd5e1;
-    background-color: white;
-  }
-  tr:nth-child(even) td {
-    background-color: #f1f5f9;
-  }
-  .highlight-box {
-    background-color: #eff6ff;
-    border: 1px solid #bfdbfe;
-    border-radius: 6px;
-    padding: 10px;
-    margin: 10px 0;
-    font-size: 9pt;
-  }
-</style>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Chile | Guia Definitivo de Viagem</title>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>Guia Completo de Viagem ao Chile: Geografia, Turismo e Dicas Práticas</h1>
-<p><b>Trabalho Escolar / Guia de Viagem</b></p>
 
-<h2>1. Visão Geral do País</h2>
-<p>O Chile está localizado na faixa ocidental da América do Sul, entre a Cordilheira dos Andes e o Oceano Pacífico. Possui uma geografia única, sendo um dos países mais compridos e estreitos do mundo (com mais de 4.300 km de extensão), abrigando desde o deserto mais árido do mundo no norte até geleiras milenares na Patagônia no sul.</p>
-<ul>
-  <li><b>Capital:</b> Santiago</li>
-  <li><b>Idioma Oficial:</b> Espanhol</li>
-  <li><b>Moeda Local:</b> Peso Chileno (CLP)</li>
-  <li><b>Fuso Horário:</b> Geralmente o mesmo horário de Brasília (GMT-3)</li>
-</ul>
+   <div class="bg-glow bg-glow-1"></div>
+   <div class="bg-glow bg-glow-2"></div>
 
-<h2>2. Documentação Necessária para Brasileiros</h2>
-<p>Graças aos acordos do Mercosul, viajar do Brasil para o Chile é simples, sem necessidade de visto ou passaporte obrigatório:</p>
-<ul>
-  <li><b>RG (Carteira de Identidade):</b> Deve estar em bom estado de conservação, com foto recente e menos de 10 anos de emissão. <i>(CNH e certidão de nascimento não são aceitas para imigração internacional).</i></li>
-  <li><b>Passaporte:</b> Opcional para brasileiros. Se utilizado, deve ter validade mínima de 6 meses.</li>
-  <li><b>Declaração Jurada do SAG:</b> Formulário obrigatório do Serviço Agrícola e Ganadeiro para controle sanitário de alimentos e vegetais.</li>
-  <li><b>Comprovação Financeira e Hospedagem:</b> Recomenda-se ter comprovantes de reserva de hospedagem, passagem de volta e limite de crédito/extrato.</li>
-  <li><b>Seguro Viagem:</b> Altamente recomendado para cobrir eventuais emergências médicas e atividades em altitude ou na neve.</li>
-</ul>
 
-<h2>3. Planejamento Financeiro e Câmbio</h2>
-<table>
-  <thead>
-    <tr>
-      <th>Método de Pagamento</th>
-      <th>IOF</th>
-      <th>Vantagens</th>
-      <th>Recomendações</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><b>Cartões Globais (Wise, Nomad, Revolut)</b></td>
-      <td>1,1%</td>
-      <td>Câmbio comercial barato, conversão no app, aceito amplamente.</td>
-      <td><b>Melhor opção geral.</b> Pague sempre na moeda local (Peso Chileno).</td>
-    </tr>
-    <tr>
-      <td><b>Cartão de Crédito Tradicional</b></td>
-      <td>~4,38%</td>
-      <td>Praticidade e acúmulo de milhas.</td>
-      <td>Spread alto. Usar apenas para emergências.</td>
-    </tr>
-    <tr>
-      <td><b>Dinheiro em Espécie (Pesos)</b></td>
-      <td>Varia</td>
-      <td>Útil para feiras, gorjetas e pequenos comércios.</td>
-      <td>Trocar em casas de câmbio no centro de Santiago. Evite andar com quantias altas.</td>
-    </tr>
-  </tbody>
-</table>
+   <header class="header">
+       <div class="header-container">
+           <a href="#" class="logo">CHILE<span>.EXP</span></a>
+           <nav class="nav">
+               <a href="#destinos">Destinos</a>
+               <a href="#roteiros">Roteiros</a>
+               <a href="#guia-pratico">Guia Prático</a>
+               <a href="#faq">Dúvidas</a>
+           </nav>
+           <a href="#planejar" class="btn btn-nav">Baixar Guia PDF</a>
+       </div>
+   </header>
 
-<div class="highlight-box">
-  <b>Dica de Ouro no Pagamento:</b> Ao pagar na maquininha de cartão no Chile, se for perguntado sobre a moeda, selecione <b>SEMPRE Pesos Chilenos (CLP)</b> para evitar taxas extras de conversão automática (DCC).
-</div>
 
-<h2>4. Principais Pontos Turísticos por Região</h2>
+   <section class="hero">
+       <div class="hero-body">
+           <span class="pill-tag">✦ Edição Atualizada 2026</span>
+           <h1>Descubra o país dos <br><span class="text-gradient">contrastes infinitos</span></h1>
+           <p>Do deserto mais árido do mundo no Atacama às geleiras milenares da Patagônia. Monte sua viagem perfeita com informações detalhadas e atualizadas.</p>
+          
+           <div class="hero-buttons">
+               <a href="#destinos" class="btn btn-primary">Explorar Regiões</a>
+               <a href="#guia-pratico" class="btn btn-secondary">Informações Práticas</a>
+           </div>
 
-<h3>A. Santiago e Região Central</h3>
-<ul>
-  <li><b>Centro Histórico e Plaza de Armas:</b> Catedral Metropolitana e Palacio de La Moneda (sede do governo).</li>
-  <li><b>Cerro San Cristóbal e Cerro Santa Lucía:</b> Mirantes com vista incrível da Cordilheira dos Andes.</li>
-  <li><b>Sky Costanera:</b> O arranha-céu mais alto da América Latina (300m).</li>
-  <li><b>Estações de Neve (Valle Nevado e Farellones):</b> A apenas 1h30 de Santiago (temporada de inverno de junho a setembro).</li>
-  <li><b>Valparaíso e Viña del Mar:</b> Cidades praianas e históricas a 120 km de Santiago.</li>
-  <li><b>Vales Vinícolas:</b> Visitações e degustações no Valle del Maipo e Casablanca (ex: Concha y Toro).</li>
-</ul>
 
-<h3>B. Norte: Deserto do Atacama</h3>
-<ul>
-  <li><b>Valle de la Luna e Valle de la Muerte:</b> Formações rochosas e dunas impressionantes.</li>
-  <li><b>Geysers del Tatio:</b> Campo geotérmico a mais de 4.300m de altitude.</li>
-  <li><b>Lagunas Altiplánicas e Salar de Atacama:</b> Paisagens incríveis e flamingos selvagens.</li>
-  <li><b>Tour Astronômico:</b> Observação de estrelas em um dos céus mais límpidos do planeta.</li>
-</ul>
+           <div class="stats-bar">
+               <div class="stat-item">
+                   <span class="stat-num">4.300 km</span>
+                   <span class="stat-desc">Extensão territorial</span>
+               </div>
+               <div class="stat-item">
+                   <span class="stat-num">300+</span>
+                   <span class="stat-desc">Dias de sol no Atacama</span>
+               </div>
+               <div class="stat-item">
+                   <span class="stat-num">100+</span>
+                   <span class="stat-desc">Vulcões ativos</span>
+               </div>
+               <div class="stat-item">
+                   <span class="stat-num">0 Visto</span>
+                   <span class="stat-desc">Para sul-americanos</span>
+               </div>
+           </div>
+       </div>
+   </section>
 
-<h3>C. Sul: Região dos Lagos e Vulcões</h3>
-<ul>
-  <li><b>Puerto Varas e Frutillar:</b> Cidades charmosas às margens do Lago Llanquihue com vista para o Vulcão Osorno.</li>
-  <li><b>Saltos del Petrohué:</b> Quedas d'água de cor turquesa sobre rochas vulcânicas.</li>
-</ul>
 
-<h3>D. Extremo Sul: Patagônia Chilena</h3>
-<ul>
-  <li><b>Parque Nacional Torres del Paine:</b> Torres de granito, glaciares e uma das melhores trilhas de trekking do mundo.</li>
-</ul>
+   <main class="container">
 
-<h2>5. Resumo das Estações</h3>
-<table>
-  <thead>
-    <tr>
-      <th>Estação</th>
-      <th>Destinos Indicados</th>
-      <th>Destaques</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><b>Inverno (Jun/Set)</b></td>
-      <td>Santiago, Valle Nevado, Farellones, Atacama</td>
-      <td>Neve, esqui e esportes de inverno.</td>
-    </tr>
-    <tr>
-      <td><b>Verão (Dez/Mar)</b></td>
-      <td>Patagônia, Região dos Lagos, Litoral</td>
-      <td>Trekking, dias longos e temperaturas amenas no sul.</td>
-    </tr>
-    <tr>
-      <td><b>Primavera/Outono</b></td>
-      <td>Santiago, Vinícolas, Atacama</td>
-      <td>Clima agradável, colheita das uvas (vindima em Março/Abril) e preços menores.</td>
-    </tr>
-  </tbody>
-</table>
 
-<h2>6. Dicas para o Trabalho Escolar</h2>
-<ul>
-  <li><b>Geografia:</b> Destaque como a latitude e a Cordilheira dos Andes influenciam a variedade de climas (do árido ao polar).</li>
-  <li><b>Economia:</b> Mencione a exportação de cobre, vinho e o peso do turismo sustentável.</li>
-  <li><b>Mercosul:</b> Destaque a facilidade de circulação de pessoas entre países membros sem burocracia de vistos.</li>
-</ul>
+       <!-- DESTINOS PRINCIPAIS -->
+       <section id="destinos" class="section">
+           <div class="section-head">
+               <span class="section-tag">Regiões Imperdíveis</span>
+               <h2>Principais Destinos Chilenos</h2>
+               <p>O Chile é dividido geograficamente em zonas com climas e paisagens completamente distintos.</p>
+           </div>
+
+
+           <div class="grid-cards">
+               <article class="card">
+                   <div class="card-media">
+                       <img src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=800&q=80" alt="Deserto do Atacama">
+                       <span class="card-badge">Norte Arido</span>
+                   </div>
+                   <div class="card-body">
+                       <h3>Deserto do Atacama</h3>
+                       <p>O deserto mais alto e árido do mundo. Destaques para o Valle de la Luna, Géysers del Tatio e as Lagonas Altiplânicas.</p>
+                       <ul class="card-list">
+                           <li><strong>Altitude:</strong> 2.400m a 4.200m</li>
+                           <li><strong>Ideal para:</strong> Astronomia e ecoturismo</li>
+                           <li><strong>Estadia mínima:</strong> 4 dias</li>
+                       </ul>
+                   </div>
+               </article>
+
+
+               <article class="card">
+                   <div class="card-media">
+                       <img src="https://images.unsplash.com/photo-1527004013197-933c4bb611b3?auto=format&fit=crop&w=800&q=80" alt="Torres del Paine">
+                       <span class="card-badge">Sul Patagônico</span>
+                   </div>
+                   <div class="card-body">
+                       <h3>Patagônia & Torres del Paine</h3>
+                       <p>Uma das maiores reservas naturais do planeta. Montanhas de granito, campos de gelo e vida selvagem exuberante.</p>
+                       <ul class="card-list">
+                           <li><strong>Clima:</strong> Vento forte / Subpolar</li>
+                           <li><strong>Ideal para:</strong> Trekking (Circuitos W e O)</li>
+                           <li><strong>Estadia mínima:</strong> 5 dias</li>
+                       </ul>
+                   </div>
+               </article>
+
+
+               <article class="card">
+                   <div class="card-media">
+                       <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=800&q=80" alt="Valparaíso e Santiago">
+                       <span class="card-badge">Zona Central</span>
+                   </div>
+                   <div class="card-body">
+                       <h3>Santiago & Valparaíso</h3>
+                       <p>A capital cosmopolita aos pés dos Andes combinada com a boemia histórica das colinas coloridas de Valparaíso.</p>
+                       <ul class="card-list">
+                           <li><strong>Clima:</strong> Mediterrâneo seco</li>
+                           <li><strong>Ideal para:</strong> Cultura, compras e gastronomia</li>
+                           <li><strong>Estadia mínima:</strong> 3 dias</li>
+                       </ul>
+                   </div>
+               </article>
+
+
+               <article class="card">
+                   <div class="card-media">
+                       <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=800&q=80" alt="Vales de Vinho">
+                       <span class="card-badge">Enoturismo</span>
+                   </div>
+                   <div class="card-body">
+                       <h3>Vales do Vinho (Maipo & Casablanca)</h3>
+                       <p>Região produtora de vinhos reconhecidos globalmente, especializada nas uvas Carménère e Cabernet Sauvignon.</p>
+                       <ul class="card-list">
+                           <li><strong>Passeios:</strong> Degustações e vinícolas premium</li>
+                           <li><strong>Distância:</strong> 1h a 2h de Santiago</li>
+                           <li><strong>Estadia mínima:</strong> 1 a 2 dias</li>
+                       </ul>
+                   </div>
+               </article>
+           </div>
+       </section>
+
+
+       <!-- ROTEIROS SUGERIDOS -->
+       <section id="roteiros" class="section">
+           <div class="section-head">
+               <span class="section-tag">Planejamento</span>
+               <h2>Sugestões de Itinerário</h2>
+           </div>
+
+
+           <div class="itinerary-grid">
+               <div class="itinerary-box">
+                   <div class="itinerary-header">
+                       <span class="days-pill">7 Dias</span>
+                       <h3>Essencial Chileno</h3>
+                   </div>
+                   <p class="itinerary-desc">Perfeito para a primeira viagem curta aproveitando o melhor da capital e arredores.</p>
+                   <ol class="itinerary-steps">
+                       <li><strong>Dias 1-3:</strong> Santiago (Centro Histórico, Cerro San Cristóbal, Sky Costanera)</li>
+                       <li><strong>Dia 4:</strong> Bate-e-volta para Valparaíso e Viña del Mar</li>
+                       <li><strong>Dia 5:</strong> Vinícolas do Vale do Maipo</li>
+                       <li><strong>Dias 6-7:</strong> Estação de Esqui (Inverno) ou Cajón del Maipo (Verão)</li>
+                   </ol>
+               </div>
+
+
+               <div class="itinerary-box highlighted-box">
+                   <div class="itinerary-header">
+                       <span class="days-pill accent-pill">10 Dias</span>
+                       <h3>Contrastes: Capital + Atacama</h3>
+                   </div>
+                   <p class="itinerary-desc">A combinação mais buscada por brasileiros unindo cidade e deserto.</p>
+                   <ol class="itinerary-steps">
+                       <li><strong>Dias 1-3:</strong> Santiago e Vinícolas</li>
+                       <li><strong>Dia 4:</strong> Voo para Calama + Transfer para San Pedro de Atacama</li>
+                       <li><strong>Dias 5-9:</strong> Tours no Atacama (Valle de la Luna, Salar, Géysers, Astronomia)</li>
+                       <li><strong>Dia 10:</strong> Retorno via Calama / Santiago</li>
+                   </ol>
+               </div>
+
+
+               <div class="itinerary-box">
+                   <div class="itinerary-header">
+                       <span class="days-pill">15 Dias</span>
+                       <h3>Expedição Extrema</h3>
+                   </div>
+                   <p class="itinerary-desc">Roteiro completo para explorar de ponta a ponta o país.</p>
+                   <ol class="itinerary-steps">
+                       <li><strong>Dias 1-3:</strong> Santiago e Valparaíso</li>
+                       <li><strong>Dias 4-8:</strong> San Pedro de Atacama</li>
+                       <li><strong>Dias 9-14:</strong> Voo para Punta Arenas e Trekking em Torres del Paine</li>
+                       <li><strong>Dia 15:</strong> Conexão final de retorno</li>
+                   </ol>
+               </div>
+           </div>
+       </section>
+
+
+       <!-- GUIA PRÁTICO (INFORMAÇÕES ADICIONAIS) -->
+       <section id="guia-pratico" class="section">
+           <div class="section-head">
+               <span class="section-tag">Logística</span>
+               <h2>Guia Prático para o Viajante</h2>
+           </div>
+
+
+           <div class="info-table-wrapper">
+               <table class="info-table">
+                   <thead>
+                       <tr>
+                           <th>Item</th>
+                           <th>Detalhes Principais</th>
+                           <th>Recomendação</th>
+                       </tr>
+                   </thead>
+                   <tbody>
+                       <tr>
+                           <td><strong>Documentos</strong></td>
+                           <td>RG emitido nos últimos 10 anos ou Passaporte válido.</td>
+                           <td>Não exige visto para estadias até 90 dias.</td>
+                       </tr>
+                       <tr>
+                           <td><strong>Moeda & Câmbio</strong></td>
+                           <td>Peso Chileno (CLP). R$ 1,00 ≈ 170-190 CLP (sujeito a variação).</td>
+                           <td>Use cartões globais (Wise/Nomad) e leve um pouco de espécie para o Atacama.</td>
+                       </tr>
+                       <tr>
+                           <td><strong>Melhor Época</strong></td>
+                           <td>Atacama: Ano todo | Patagônia: Out/Mar | Esqui: Jun/Set.</td>
+                           <td>Defina suas datas com base na região que priorizar.</td>
+                       </tr>
+                       <tr>
+                           <td><strong>Tomada & Energia</strong></td>
+                           <td>220V / 50Hz. Tomadas tipo C e L (três pinos redondos em linha).</td>
+                           <td>Traga um adaptador universal.</td>
+                       </tr>
+                       <tr>
+                           <td><strong>Seguro Viagem</strong></td>
+                           <td>Não é obrigatório, mas altamente recomendado para áreas remotas.</td>
+                           <td>Contrate cobertura com proteção para esportes de aventura.</td>
+                       </tr>
+                   </tbody>
+               </table>
+           </div>
+       </section>
+
+
+       <!-- FAQ ACCORDION -->
+       <section id="faq" class="section">
+           <div class="section-head">
+               <span class="section-tag">Dúvidas Frequentes</span>
+               <h2>Perguntas Comuns</h2>
+           </div>
+
+
+           <div class="faq-list">
+               <details class="faq-item">
+                   <summary>Qual a melhor moeda para levar ao Chile?</summary>
+                   <p>O melhor é utilizar cartões de débito internacionais digitais (como Wise, Nomad ou Revolut) que oferecem cotação comercial. Para pequenas compras no Atacama ou feiras locais, retire um pouco de dinheiro físico em pesos chilenos em caixas eletrônicos.</p>
+               </details>
+
+
+               <details class="faq-item">
+                   <summary>Preciso de vacinas para entrar no país?</summary>
+                   <p>Atualmente, o Chile não exige vacina de febre amarela ou restrições sanitárias específicas para cidadãos sul-americanos, mas é aconselhável ter a carteira de vacinação atualizada.</p>
+               </details>
+
+
+               <details class="faq-item">
+                   <summary>Como evitar o mal da altitude (soroche) no Atacama?</summary>
+                   <p>Mantenha-se muito bem hidratado, evite refeições pesadas e bebidas alcoólicas no primeiro dia e faça os passeios mais altos (como os Géysers del Tatio a 4.300m) apenas após 2 ou 3 dias de aclimatação.</p>
+               </details>
+           </div>
+       </section>
+
+
+       <!-- NEWSLETTER / PLANEJAR -->
+       <section id="planejar" class="cta-section">
+           <div class="cta-box">
+               <h2>Pronto para organizar sua viagem ao Chile?</h2>
+               <p>Inscreva-se para receber nosso e-book gratuito com mapas offline, custos detalhados por dia e contatos de agências credenciadas.</p>
+               <form class="cta-form" onsubmit="event.preventDefault(); alert('Guia enviado para seu e-mail!');">
+                   <input type="email" placeholder="Seu e-mail principal..." required>
+                   <button type="submit" class="btn btn-primary">Receber E-book PDF</button>
+               </form>
+           </div>
+       </section>
+
+
+   </main>
+
+
+   <footer class="footer">
+       <div class="footer-content">
+           <div class="footer-col">
+               <a href="#" class="logo">CHILE<span>.EXP</span></a>
+               <p>Plataforma independente de informações, roteiros e dicas práticas sobre o turismo no Chile.</p>
+           </div>
+           <div class="footer-col">
+               <h4>Navegação</h4>
+               <ul>
+                   <li><a href="#destinos">Destinos</a></li>
+                   <li><a href="#roteiros">Roteiros</a></li>
+                   <li><a href="#guia-pratico">Guia Prático</a></li>
+               </ul>
+           </div>
+           <div class="footer-col">
+               <h4>Regiões</h4>
+               <ul>
+                   <li><a href="#destinos">Deserto do Atacama</a></li>
+                   <li><a href="#destinos">Patagônia Chilena</a></li>
+                   <li><a href="#destinos">Santiago & Vales</a></li>
+               </ul>
+           </div>
+       </div>
+       <div class="footer-bottom">
+           <p>&copy; 2026 CHILE.EXP - Todos os direitos reservados.</p>
+       </div>
+   </footer>
+
 
 </body>
 </html>
-"""
-
-weasyprint.HTML(string=html_content).write_pdf("guia_chile.pdf")
-print("PDF gerado com sucesso!")
+<a href="seu-arquivo.pdf" download="Guia_Completo.pdf">
+ <button>Baixar Guia (PDF)</button>
+</a>
