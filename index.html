@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chile | Descubra o Extraordinário</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <header class="navbar">
@@ -36,7 +39,8 @@
             <div class="cards-grid">
                 <article class="card">
                     <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=800&q=80" alt="Deserto do Atacama">
+                        <img src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=800&q=80"
+                            alt="Deserto do Atacama">
                     </div>
                     <div class="card-content">
                         <span class="card-tag">Natureza</span>
@@ -47,7 +51,8 @@
 
                 <article class="card">
                     <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1527004013197-933c4bb611b3?auto=format&fit=crop&w=800&q=80" alt="Torres del Paine">
+                        <img src="https://images.unsplash.com/photo-1527004013197-933c4bb611b3?auto=format&fit=crop&w=800&q=80"
+                            alt="Torres del Paine">
                     </div>
                     <div class="card-content">
                         <span class="card-tag">Aventura</span>
@@ -58,12 +63,14 @@
 
                 <article class="card">
                     <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=800&q=80" alt="Valparaíso">
+                        <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=800&q=80"
+                            alt="Valparaíso">
                     </div>
                     <div class="card-content">
                         <span class="card-tag">Urbano</span>
                         <h3>Valparaíso</h3>
-                        <p>Arte de rua pulsante, colinas históricas e arquitetura única banhada pelo Oceano Pacífico.</p>
+                        <p>Arte de rua pulsante, colinas históricas e arquitetura única banhada pelo Oceano Pacífico.
+                        </p>
                     </div>
                 </article>
             </div>
@@ -74,7 +81,8 @@
             <div class="cards-grid">
                 <article class="card">
                     <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80" alt="Música e Cultura">
+                        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80"
+                            alt="Música e Cultura">
                     </div>
                     <div class="card-content">
                         <span class="card-tag">Tradição</span>
@@ -85,7 +93,8 @@
 
                 <article class="card">
                     <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=800&q=80" alt="Literatura Chilena">
+                        <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=800&q=80"
+                            alt="Literatura Chilena">
                     </div>
                     <div class="card-content">
                         <span class="card-tag">Literatura</span>
@@ -99,14 +108,23 @@
         <section id="gastronomia" class="highlight-box">
             <div class="highlight-content">
                 <h2>Sabores Inesquecíveis</h2>
-                <p>Descubra a rica culinária baseada em frutos do mar, empanadas tradicionais e os mundialmente renomados vinhos do Vale do Maipo.</p>
+                <p>Descubra a rica culinária baseada em frutos do mar, empanadas tradicionais e os mundialmente
+                    renomados vinhos do Vale do Maipo.</p>
             </div>
         </section>
     </main>
-
+    <section class="newsletter">
+        <h2>Receba nosso Guia Gratuito</h2>
+        <p>Inscreva-se para receber itinerários exclusivos e dicas de viagem sobre o Chile.</p>
+        <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Inscrição realizada!');">
+            <input type="email" placeholder="Digite seu melhor e-mail" required>
+            <button type="submit" class="btn">Garantir Guia</button>
+        </form>
+    </section>
     <footer>
         <p>&copy; 2026 Chile Tourism Guide. Todos os direitos reservados.</p>
     </footer>
 
 </body>
+
 </html>
