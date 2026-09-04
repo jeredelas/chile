@@ -3,144 +3,302 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chile | Experience The Extreme</title>
+    <title>Chile | Guia Definitivo de Viagem</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="glow-bg"></div>
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
 
-    <header class="navbar-wrapper">
-        <nav class="navbar">
-            <a href="#" class="logo">CHILE<span>.</span></a>
-            <div class="nav-links">
+    <header class="header">
+        <div class="header-container">
+            <a href="#" class="logo">CHILE<span>.EXP</span></a>
+            <nav class="nav">
                 <a href="#destinos">Destinos</a>
-                <a href="#experiencias">Experiências</a>
                 <a href="#roteiros">Roteiros</a>
-            </div>
-            <a href="#newsletter" class="btn-glow">Agendar Guia</a>
-        </nav>
+                <a href="#guia-pratico">Guia Prático</a>
+                <a href="#faq">Dúvidas</a>
+            </nav>
+            <a href="#planejar" class="btn btn-nav">Baixar Guia PDF</a>
+        </div>
     </header>
 
     <section class="hero">
-        <div class="hero-content">
-            <div class="hero-tag">✨ Nova Edição 2026</div>
-            <h1>O DESTINO MAIS <br><span class="gradient-text">EXTRAORDINÁRIO</span> DA AMÉRICA</h1>
-            <p>Conecte-se com paisagens surreais em um design de viagem pensado para o viajante moderno.</p>
-            <div class="hero-stats">
-                <div class="stat">
-                    <h3>4.300 km</h3>
-                    <p>De Extensão Norte-Sul</p>
+        <div class="hero-body">
+            <span class="pill-tag">✦ Edição Atualizada 2026</span>
+            <h1>Descubra o país dos <br><span class="text-gradient">contrastes infinitos</span></h1>
+            <p>Do deserto mais árido do mundo no Atacama às geleiras milenares da Patagônia. Monte sua viagem perfeita com informações detalhadas e atualizadas.</p>
+            
+            <div class="hero-buttons">
+                <a href="#destinos" class="btn btn-primary">Explorar Regiões</a>
+                <a href="#guia-pratico" class="btn btn-secondary">Informações Práticas</a>
+            </div>
+
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <span class="stat-num">4.300 km</span>
+                    <span class="stat-desc">Extensão territorial</span>
                 </div>
-                <div class="stat-divider"></div>
-                <div class="stat">
-                    <h3>#1</h3>
-                    <p>Destino de Aventura Mundial</p>
+                <div class="stat-item">
+                    <span class="stat-num">300+</span>
+                    <span class="stat-desc">Dias de sol no Atacama</span>
                 </div>
-                <div class="stat-divider"></div>
-                <div class="stat">
-                    <h3>300+</h3>
-                    <p>Dias de Céu Limpo por Ano</p>
+                <div class="stat-item">
+                    <span class="stat-num">100+</span>
+                    <span class="stat-desc">Vulcões ativos</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-num">0 Visto</span>
+                    <span class="stat-desc">Para sul-americanos</span>
                 </div>
             </div>
         </div>
     </section>
 
     <main class="container">
-        <!-- BENTO GRID SECTION -->
-        <section id="destinos">
-            <div class="section-title-group">
-                <span class="badge">Ecosistemas Únicos</span>
-                <h2>Exploração em Formato Bento</h2>
+
+        <!-- DESTINOS PRINCIPAIS -->
+        <section id="destinos" class="section">
+            <div class="section-head">
+                <span class="section-tag">Regiões Imperdíveis</span>
+                <h2>Principais Destinos Chilenos</h2>
+                <p>O Chile é dividido geograficamente em zonas com climas e paisagens completamente distintos.</p>
             </div>
 
-            <div class="bento-grid">
-                <!-- Card Grande Em Destaque -->
-                <article class="bento-card bento-hero">
-                    <img src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=1200&q=80" alt="Atacama">
-                    <div class="bento-overlay"></div>
-                    <div class="bento-content">
-                        <span class="bento-tag">Deserto Árido</span>
+            <div class="grid-cards">
+                <article class="card">
+                    <div class="card-media">
+                        <img src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=800&q=80" alt="Deserto do Atacama">
+                        <span class="card-badge">Norte Arido</span>
+                    </div>
+                    <div class="card-body">
                         <h3>Deserto do Atacama</h3>
-                        <p>A experiência definitiva sob as estrelas e paisagens vulcânicas da Cordilheira.</p>
-                        <a href="#" class="link-arrow">Descobrir Rota &rarr;</a>
+                        <p>O deserto mais alto e árido do mundo. Destaques para o Valle de la Luna, Géysers del Tatio e as Lagonas Altiplânicas.</p>
+                        <ul class="card-list">
+                            <li><strong>Altitude:</strong> 2.400m a 4.200m</li>
+                            <li><strong>Ideal para:</strong> Astronomia e ecoturismo</li>
+                            <li><strong>Estadia mínima:</strong> 4 dias</li>
+                        </ul>
                     </div>
                 </article>
 
-                <!-- Card Médio 1 -->
-                <article class="bento-card">
-                    <img src="https://images.unsplash.com/photo-1527004013197-933c4bb611b3?auto=format&fit=crop&w=800&q=80" alt="Patagônia">
-                    <div class="bento-overlay"></div>
-                    <div class="bento-content">
-                        <span class="bento-tag">Geleiras</span>
-                        <h3>Torres del Paine</h3>
-                        <p>O épico santuário de montanhas na Patagônia.</p>
+                <article class="card">
+                    <div class="card-media">
+                        <img src="https://images.unsplash.com/photo-1527004013197-933c4bb611b3?auto=format&fit=crop&w=800&q=80" alt="Torres del Paine">
+                        <span class="card-badge">Sul Patagônico</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Patagônia & Torres del Paine</h3>
+                        <p>Uma das maiores reservas naturais do planeta. Montanhas de granito, campos de gelo e vida selvagem exuberante.</p>
+                        <ul class="card-list">
+                            <li><strong>Clima:</strong> Vento forte / Subpolar</li>
+                            <li><strong>Ideal para:</strong> Trekking (Circuitos W e O)</li>
+                            <li><strong>Estadia mínima:</strong> 5 dias</li>
+                        </ul>
                     </div>
                 </article>
 
-                <!-- Card Médio 2 -->
-                <article class="bento-card">
-                    <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=800&q=80" alt="Enoturismo">
-                    <div class="bento-overlay"></div>
-                    <div class="bento-content">
-                        <span class="bento-tag">Gastronomia</span>
-                        <h3>Rotas do Vinho</h3>
-                        <p>Degustação nos premiados vales chilenos.</p>
+                <article class="card">
+                    <div class="card-media">
+                        <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=800&q=80" alt="Valparaíso e Santiago">
+                        <span class="card-badge">Zona Central</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Santiago & Valparaíso</h3>
+                        <p>A capital cosmopolita aos pés dos Andes combinada com a boemia histórica das colinas coloridas de Valparaíso.</p>
+                        <ul class="card-list">
+                            <li><strong>Clima:</strong> Mediterrâneo seco</li>
+                            <li><strong>Ideal para:</strong> Cultura, compras e gastronomia</li>
+                            <li><strong>Estadia mínima:</strong> 3 dias</li>
+                        </ul>
                     </div>
                 </article>
 
-                <!-- Card Largo Baixo -->
-                <article class="bento-card bento-wide">
-                    <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=1200&q=80" alt="Valparaíso">
-                    <div class="bento-overlay"></div>
-                    <div class="bento-content">
-                        <span class="bento-tag">Cultura & Arte</span>
-                        <h3>Valparaíso & Costa Central</h3>
-                        <p>Cores, funiculares históricos e a brisa marcante do Oceano Pacífico.</p>
+                <article class="card">
+                    <div class="card-media">
+                        <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=800&q=80" alt="Vales de Vinho">
+                        <span class="card-badge">Enoturismo</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Vales do Vinho (Maipo & Casablanca)</h3>
+                        <p>Região produtora de vinhos reconhecidos globalmente, especializada nas uvas Carménère e Cabernet Sauvignon.</p>
+                        <ul class="card-list">
+                            <li><strong>Passeios:</strong> Degustações e vinícolas premium</li>
+                            <li><strong>Distância:</strong> 1h a 2h de Santiago</li>
+                            <li><strong>Estadia mínima:</strong> 1 a 2 dias</li>
+                        </ul>
                     </div>
                 </article>
             </div>
         </section>
 
-        <!-- CARDS COM EFEITO GLASSMORPHISM -->
-        <section id="experiencias" class="glass-section">
-            <div class="glass-card">
-                <div class="glass-icon">🌌</div>
-                <h3>Turismo Astronômico</h3>
-                <p>Visite os observatórios científicos mais avançados e contemple a Via Láctea sem poluição luminosa.</p>
+        <!-- ROTEIROS SUGERIDOS -->
+        <section id="roteiros" class="section">
+            <div class="section-head">
+                <span class="section-tag">Planejamento</span>
+                <h2>Sugestões de Itinerário</h2>
             </div>
-            <div class="glass-card">
-                <div class="glass-icon">⛷️</div>
-                <h3>Esqui nos Andes</h3>
-                <p>Estações de padrão internacional como Valle Nevado e Portillo a pouca distância da capital.</p>
-            </div>
-            <div class="glass-card">
-                <div class="glass-icon">🗿</div>
-                <h3>Ilha de Páscoa</h3>
-                <p>Misteriosos Moais e cultura Rapa Nui isolada no meio do Oceano Pacífico.</p>
+
+            <div class="itinerary-grid">
+                <div class="itinerary-box">
+                    <div class="itinerary-header">
+                        <span class="days-pill">7 Dias</span>
+                        <h3>Essencial Chileno</h3>
+                    </div>
+                    <p class="itinerary-desc">Perfeito para a primeira viagem curta aproveitando o melhor da capital e arredores.</p>
+                    <ol class="itinerary-steps">
+                        <li><strong>Dias 1-3:</strong> Santiago (Centro Histórico, Cerro San Cristóbal, Sky Costanera)</li>
+                        <li><strong>Dia 4:</strong> Bate-e-volta para Valparaíso e Viña del Mar</li>
+                        <li><strong>Dia 5:</strong> Vinícolas do Vale do Maipo</li>
+                        <li><strong>Dias 6-7:</strong> Estação de Esqui (Inverno) ou Cajón del Maipo (Verão)</li>
+                    </ol>
+                </div>
+
+                <div class="itinerary-box highlighted-box">
+                    <div class="itinerary-header">
+                        <span class="days-pill accent-pill">10 Dias</span>
+                        <h3>Contrastes: Capital + Atacama</h3>
+                    </div>
+                    <p class="itinerary-desc">A combinação mais buscada por brasileiros unindo cidade e deserto.</p>
+                    <ol class="itinerary-steps">
+                        <li><strong>Dias 1-3:</strong> Santiago e Vinícolas</li>
+                        <li><strong>Dia 4:</strong> Voo para Calama + Transfer para San Pedro de Atacama</li>
+                        <li><strong>Dias 5-9:</strong> Tours no Atacama (Valle de la Luna, Salar, Géysers, Astronomia)</li>
+                        <li><strong>Dia 10:</strong> Retorno via Calama / Santiago</li>
+                    </ol>
+                </div>
+
+                <div class="itinerary-box">
+                    <div class="itinerary-header">
+                        <span class="days-pill">15 Dias</span>
+                        <h3>Expedição Extrema</h3>
+                    </div>
+                    <p class="itinerary-desc">Roteiro completo para explorar de ponta a ponta o país.</p>
+                    <ol class="itinerary-steps">
+                        <li><strong>Dias 1-3:</strong> Santiago e Valparaíso</li>
+                        <li><strong>Dias 4-8:</strong> San Pedro de Atacama</li>
+                        <li><strong>Dias 9-14:</strong> Voo para Punta Arenas e Trekking em Torres del Paine</li>
+                        <li><strong>Dia 15:</strong> Conexão final de retorno</li>
+                    </ol>
+                </div>
             </div>
         </section>
 
-        <!-- NEWSLETTER FUTURISTA -->
-        <section id="newsletter" class="cta-box">
-            <div class="cta-inner">
-                <span class="gradient-text uppercase">Acesso VIP</span>
-                <h2>Receba itinerários exclusivos em PDF</h2>
-                <p>Junte-se a mais de 20.000 viajantes e receba mapas interativos e guias de custos semanais.</p>
-                <form class="cta-form" onsubmit="event.preventDefault(); alert('Inscrição confirmada!');">
-                    <input type="email" placeholder="Seu melhor e-mail..." required>
-                    <button type="submit" class="btn-glow">Receber Guia</button>
+        <!-- GUIA PRÁTICO (INFORMAÇÕES ADICIONAIS) -->
+        <section id="guia-pratico" class="section">
+            <div class="section-head">
+                <span class="section-tag">Logística</span>
+                <h2>Guia Prático para o Viajante</h2>
+            </div>
+
+            <div class="info-table-wrapper">
+                <table class="info-table">
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Detalhes Principais</th>
+                            <th>Recomendação</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Documentos</strong></td>
+                            <td>RG emitido nos últimos 10 anos ou Passaporte válido.</td>
+                            <td>Não exige visto para estadias até 90 dias.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Moeda & Câmbio</strong></td>
+                            <td>Peso Chileno (CLP). R$ 1,00 ≈ 170-190 CLP (sujeito a variação).</td>
+                            <td>Use cartões globais (Wise/Nomad) e leve um pouco de espécie para o Atacama.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Melhor Época</strong></td>
+                            <td>Atacama: Ano todo | Patagônia: Out/Mar | Esqui: Jun/Set.</td>
+                            <td>Defina suas datas com base na região que priorizar.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Tomada & Energia</strong></td>
+                            <td>220V / 50Hz. Tomadas tipo C e L (três pinos redondos em linha).</td>
+                            <td>Traga um adaptador universal.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Seguro Viagem</strong></td>
+                            <td>Não é obrigatório, mas altamente recomendado para áreas remotas.</td>
+                            <td>Contrate cobertura com proteção para esportes de aventura.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- FAQ ACCORDION -->
+        <section id="faq" class="section">
+            <div class="section-head">
+                <span class="section-tag">Dúvidas Frequentes</span>
+                <h2>Perguntas Comuns</h2>
+            </div>
+
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary>Qual a melhor moeda para levar ao Chile?</summary>
+                    <p>O melhor é utilizar cartões de débito internacionais digitais (como Wise, Nomad ou Revolut) que oferecem cotação comercial. Para pequenas compras no Atacama ou feiras locais, retire um pouco de dinheiro físico em pesos chilenos em caixas eletrônicos.</p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>Preciso de vacinas para entrar no país?</summary>
+                    <p>Atualmente, o Chile não exige vacina de febre amarela ou restrições sanitárias específicas para cidadãos sul-americanos, mas é aconselhável ter a carteira de vacinação atualizada.</p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>Como evitar o mal da altitude (soroche) no Atacama?</summary>
+                    <p>Mantenha-se muito bem hidratado, evite refeições pesadas e bebidas alcoólicas no primeiro dia e faça os passeios mais altos (como os Géysers del Tatio a 4.300m) apenas após 2 ou 3 dias de aclimatação.</p>
+                </details>
+            </div>
+        </section>
+
+        <!-- NEWSLETTER / PLANEJAR -->
+        <section id="planejar" class="cta-section">
+            <div class="cta-box">
+                <h2>Pronto para organizar sua viagem ao Chile?</h2>
+                <p>Inscreva-se para receber nosso e-book gratuito com mapas offline, custos detalhados por dia e contatos de agências credenciadas.</p>
+                <form class="cta-form" onsubmit="event.preventDefault(); alert('Guia enviado para seu e-mail!');">
+                    <input type="email" placeholder="Seu e-mail principal..." required>
+                    <button type="submit" class="btn btn-primary">Receber E-book PDF</button>
                 </form>
             </div>
         </section>
+
     </main>
 
-    <footer>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-col">
+                <a href="#" class="logo">CHILE<span>.EXP</span></a>
+                <p>Plataforma independente de informações, roteiros e dicas práticas sobre o turismo no Chile.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="#destinos">Destinos</a></li>
+                    <li><a href="#roteiros">Roteiros</a></li>
+                    <li><a href="#guia-pratico">Guia Prático</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Regiões</h4>
+                <ul>
+                    <li><a href="#destinos">Deserto do Atacama</a></li>
+                    <li><a href="#destinos">Patagônia Chilena</a></li>
+                    <li><a href="#destinos">Santiago & Vales</a></li>
+                </ul>
+            </div>
+        </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 CHILE TRAVEL EXPERIENCE. DESIGN REINVENTADO.</p>
+            <p>&copy; 2026 CHILE.EXP - Todos os direitos reservados.</p>
         </div>
     </footer>
 
